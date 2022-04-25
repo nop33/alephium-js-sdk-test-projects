@@ -1,0 +1,14 @@
+{
+  "name": "node-example",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start-cjs": "node main-cjs.js",
+    "start-esm": "node main-esm.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alephium/sdk": "^0.0.5"
+  }
+}
