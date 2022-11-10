@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start-cjs": "node main-cjs.js",
-    "start-esm": "node main-esm.js"
+    "test:cjs": "node main-cjs.cjs",
+    "test:esm": "node main-esm.js",
+    "test:browser": "npx http-server ."
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@alephium/sdk": "^0.0.5"
+    "@alephium/sdk": "file:../../js-sdk/alephium-sdk-0.2.1.tgz"
   }
 }

@@ -7,9 +7,24 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="/node_modules/@alephium/sdk/dist/alephium.min.js"></script>
+    <script src="node_modules/@alephium/sdk/dist/alephium.min.js"></script>
     <script>
-      console.log(alephium);
+      const explorerClient = new alephium.ExplorerClient({ baseUrl: "https://testnet-backend.alephium.org" });
+      const address = "125orKZtvWeoWqbrHy7vHZQvpLfAaGkU5Tn91KzZqQzot";
+
+      explorerClient.getAddressDetails(address).then((result) => {
+        alert(`
+address: ${address}
+balance: ${result.data.balance}
+locked balance: ${result.data.lockedBalance}
+number of transactions: ${result.data.txNumber}`);
+      });
+
+      fetch("https://api.coingecko.com/api/v3/simple/price?ids=alephium&vs_currencies=usd")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
     </script>
   </body>
 </html>

@@ -1,29 +1,25 @@
+## Install
+
+```shell
+npm i
+```
+
 ## Test CommonJS
 
 ```shell
-npm run start-cjs
+npm run test:cjs
 ```
 
 ## Test ESM
 
-Add this to `package.json`:
-
-```json
-{
-  "type": "module"
-}
-```
-
-and run:
-
 ```shell
-npm run start-esm
+npm run test:esm
 ```
 
 ## Test browser
 
 ```
-npx http-server .
+npm run test:browser
 ```
 
 and open `http://127.0.0.1:8080` on the browser.

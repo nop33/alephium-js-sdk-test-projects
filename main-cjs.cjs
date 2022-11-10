@@ -1,6 +1,6 @@
-import * as sdk from "@alephium/sdk";
+const sdk = require("@alephium/sdk");
 
-console.log("hello, ESM world");
+console.log("hello, CJS world");
 
 const explorerClient = new sdk.ExplorerClient({ baseUrl: "https://testnet-backend.alephium.org" });
 explorerClient
